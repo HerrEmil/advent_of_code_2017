@@ -1,0 +1,13 @@
+{
+  "name": "herremil-javascript",
+  "version": "1.0.0",
+  "main": "solve-all-days.js",
+  "scripts": {
+    "test": "mocha *.spec.js",
+    "test:w": "mocha *.spec.js -w"
+  },
+  "author": "Emil Andersson",
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  }
+}
