@@ -21,14 +21,10 @@ solve = (digits, offset) => {
   return sum;
 }
 
-solvePuzzle1 = (digits) => {
+module.exports.solvePuzzle1 = solvePuzzle1 = (digits) => {
   return solve(digits, 1);
 }
 
-solvePuzzle2 = (digits) => {
-  const offset = digits.length / 2;
-  return solve(digits, offset);
+module.exports.solvePuzzle2 = solvePuzzle2 = (digits) => {
+  return solve(digits, (digits.length / 2));
 }
-
-module.exports.solvePuzzle1 = solvePuzzle1;
-module.exports.solvePuzzle2 = solvePuzzle2;
