@@ -11,5 +11,10 @@ console.log(`Day 02, puzzle 1 answer: ${day02.solvePuzzle1(day02Input)}`); // 34
 console.log(`Day 02, puzzle 2 answer: ${day02.solvePuzzle2(day02Input)}`); // 221
 
 const day03 = require('./day-03');
-console.log(`Day 03, puzzle 1 answer: ${day03.solvePuzzle1(265149)}`);
-console.log(`Day 03, puzzle 1 answer: ${day03.solvePuzzle2(265149)}`);
+console.log(`Day 03, puzzle 1 answer: ${day03.solvePuzzle1(265149)}`); // 438
+console.log(`Day 03, puzzle 1 answer: ${day03.solvePuzzle2(265149)}`); // 266330
+
+const day04Input = fs.readFileSync('day-04-input.txt').toString();
+const day04 = require('./day-04');
+console.log(`Day 04, puzzle 1 answer: ${day04.solvePuzzle1(day04Input)}`); // 325
+console.log(`Day 04, puzzle 2 answer: ${day04.solvePuzzle2(day04Input)}`); // 119
