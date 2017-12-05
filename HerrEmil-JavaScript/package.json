@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "solve-all-days.js",
   "scripts": {
+    "solve": "node solve-all-days.js",
     "test": "mocha *.spec.js",
     "test:w": "mocha *.spec.js -w"
   },

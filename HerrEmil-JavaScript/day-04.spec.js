@@ -1,7 +1,7 @@
 let assert = require('assert');
 let puzzle = require('./day-04');
 
-describe('Day 03, isValidPassPhrase tests', () => {
+describe('Day 04, isValidPassPhrase tests', () => {
   it('should return true given input "aa bb cc dd ee"', () => {
     assert.equal(puzzle.isValidPassPhrase('aa bb cc dd ee'), true);
   });
@@ -15,7 +15,7 @@ describe('Day 03, isValidPassPhrase tests', () => {
   });
 });
 
-describe('Day 03, isValidPassPhrase tests', () => {
+describe('Day 04, isValidPassPhrase tests', () => {
   it('should return true given input "abcde fghij"', () => {
     assert.equal(puzzle.isValidPassPhrase('abcde fghij', true), true);
   });

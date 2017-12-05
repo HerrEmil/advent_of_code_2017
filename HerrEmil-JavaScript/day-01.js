@@ -6,7 +6,7 @@ getCharAtOffsetFromIndex = (i, offset, digits) => {
   return digits[charIndex];
 }
 
-solve = (digits, offset) => {
+day01Solve = (digits, offset) => {
   let sum = 0;
 
   for (let i = 0; i < digits.length; i += 1) {
@@ -22,9 +22,9 @@ solve = (digits, offset) => {
 }
 
 module.exports.solvePuzzle1 = solvePuzzle1 = (digits) => {
-  return solve(digits, 1);
+  return day01Solve(digits, 1);
 }
 
 module.exports.solvePuzzle2 = solvePuzzle2 = (digits) => {
-  return solve(digits, (digits.length / 2));
+  return day01Solve(digits, (digits.length / 2));
 }

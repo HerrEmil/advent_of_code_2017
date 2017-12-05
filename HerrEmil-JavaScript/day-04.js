@@ -16,7 +16,7 @@ module.exports.isValidPassPhrase = isValidPassPhrase = (passphrase = '', anagram
   return true;
 }
 
-solve = (input = '', anagramCheck = false) => {
+day04Solve = (input = '', anagramCheck = false) => {
   const passphraseList = input.split(/\n|\r\n/);
   let validCount = 0;
 
@@ -29,5 +29,5 @@ solve = (input = '', anagramCheck = false) => {
   return validCount;
 }
 
-module.exports.solvePuzzle1 = (input = '') => solve(input, false);
-module.exports.solvePuzzle2 = (input = '') => solve(input, true);
+module.exports.solvePuzzle1 = (input = '') => day04Solve(input, false);
+module.exports.solvePuzzle2 = (input = '') => day04Solve(input, true);
