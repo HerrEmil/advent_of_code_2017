@@ -21,7 +21,7 @@ console.log(`Day 04, puzzle 2 answer: ${day04.solvePuzzle2(day04Input)}`); // 11
 
 const day05Input = fs.readFileSync('day-05-input.txt').toString();
 const day05 = require('./day-05');
-console.log(`Day 05, puzzle 1 answer: ${day05.solvePuzzle1(day05Input)}`); // 387096
+console.log(`Day 05, puzzle 1 answer: ${day05.solvePuzzle1(day05Input)}`); // 388096
 console.log(`Day 05, puzzle 2 answer: ${day05.solvePuzzle2(day05Input)}`); // 28040648
 
 const day06Input = fs.readFileSync('day-06-input.txt').toString();
@@ -29,8 +29,12 @@ const day06 = require('./day-06');
 console.log(`Day 06, puzzle 1 answer: ${day06.solvePuzzle1(day06Input)}`); // 5042
 console.log(`Day 06, puzzle 2 answer: ${day06.solvePuzzle2(day06Input)}`); // 1086
 
-
 const day07Input = fs.readFileSync('day-07-input.txt').toString();
 const day07 = require('./day-07');
 console.log(`Day 07, puzzle 1 answer: ${day07.solvePuzzle1(day07Input)}`); // uownj
 console.log(`Day 07, puzzle 2 answer: ${day07.solvePuzzle2(day07Input)}`); // 596
+
+const day08Input = fs.readFileSync('day-08-input.txt').toString();
+const day08 = require('./day-08');
+console.log(`Day 08, puzzle 1 answer: ${day08.solvePuzzle1(day08Input)}`); // 3089
+console.log(`Day 08, puzzle 2 answer: ${day08.solvePuzzle2(day08Input)}`); // 5391
