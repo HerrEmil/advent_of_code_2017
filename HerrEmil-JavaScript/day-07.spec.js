@@ -10,7 +10,7 @@ describe('Day 07, solvePuzzle1 tests', () => {
 });
 
 describe('Day 07, solvePuzzle2 tests', () => {
-  it('should return 8 given example input', () => {
-    assert.equal(puzzle.solvePuzzle2(exampleInput, true), 8);
+  it('should return 60 given example input', () => {
+    assert.equal(puzzle.solvePuzzle2(exampleInput, true), 60);
   });
 });
