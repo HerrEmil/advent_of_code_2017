@@ -50,3 +50,9 @@ const day10Input = fs.readFileSync('day-10-input.txt').toString();
 const day10 = require('./day-10');
 console.log(`Day 10, puzzle 1 answer: ${day10.solvePuzzle1(day10Input)}`); // 826
 console.log(`Day 10, puzzle 2 answer: ${day10.solvePuzzle2(day10Input)}`); // d067d3f14d07e09c2e7308c3926605c4
+
+
+const day11Input = fs.readFileSync('day-11-input.txt').toString();
+const day11 = require('./day-11');
+console.log(`Day 11, puzzle 1 answer: ${day11.solvePuzzle1(day11Input)}`); // 747
+console.log(`Day 11, puzzle 2 answer: ${day11.solvePuzzle2(day11Input)}`); // 1544
