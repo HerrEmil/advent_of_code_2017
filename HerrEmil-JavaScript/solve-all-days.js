@@ -67,3 +67,7 @@ console.log(`Day 13, puzzle 2 answer: ${day13.solvePuzzle2(day13Input)}`); // 38
 const day14 = require('./day-14');
 console.log(`Day 14, puzzle 1 answer: ${day14.solvePuzzle1('ugkiagan')}`); // 8292
 console.log(`Day 14, puzzle 2 answer: ${day14.solvePuzzle2('ugkiagan')}`); // 1069
+
+const day15 = require('./day-15');
+console.log(`Day 15, puzzle 1 answer: ${day15.solvePuzzle1(512, 191)}`); // 567
+console.log(`Day 15, puzzle 2 answer: ${day15.solvePuzzle2(512, 191)}`); // 

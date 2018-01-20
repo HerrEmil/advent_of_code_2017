@@ -1,34 +1,35 @@
 const day10 = require('./day-10');
 
 const hexBinaryLookup = new Map([
-  ['0', [false, false, false, false]],
-  ['1', [false, false, false, true]],
-  ['2', [false, false, true, false]],
-  ['3', [false, false, true, true]],
-  ['4', [false, true, false, false]],
-  ['5', [false, true, false, true]],
-  ['6', [false, true, true, false]],
-  ['7', [false, true, true, true]],
-  ['8', [true, false, false, false]],
-  ['9', [true, false, false, true]],
-  ['a', [true, false, true, false]],
-  ['b', [true, false, true, true]],
-  ['c', [true, true, false, false]],
-  ['d', [true, true, false, true]],
-  ['e', [true, true, true, false]],
-  ['f', [true, true, true, true]],
+  ['0', '0000'],
+  ['1', '0001'],
+  ['2', '0010'],
+  ['3', '0011'],
+  ['4', '0100'],
+  ['5', '0101'],
+  ['6', '0110'],
+  ['7', '0111'],
+  ['8', '1000'],
+  ['9', '1001'],
+  ['a', '1010'],
+  ['b', '1011'],
+  ['c', '1100'],
+  ['d', '1101'],
+  ['e', '1110'],
+  ['f', '1111'],
 ]);
 
-const hexToBinary = (hexString = '') => Array.from(hexString)
+module.exports.hexToBinary = hexToBinary = (hexString = '') => Array
+  .from(hexString)
   .map(char => hexBinaryLookup.get(char))
-  .reduce((total, nibble) => total.concat(nibble), []);
+  .join('');
 
 const deleteGroup = (grid = [], i = 0, j = 0) => {
   const positionsToDelete = [{ i, j }];
 
   while (positionsToDelete.length !== 0) {
     const { i, j } = positionsToDelete.pop();
-    if (grid[i][j]) {
+    if (grid[i][j] === '1') {
       if (i !== 0) {
         positionsToDelete.push({ i: i - 1, j });
       }
@@ -41,7 +42,7 @@ const deleteGroup = (grid = [], i = 0, j = 0) => {
       if (j !== 127) {
         positionsToDelete.push({ i, j: j + 1 });
       }
-      grid[i][j] = false;
+      grid[i][j] = '0';
     }
   }
 }
@@ -50,23 +51,22 @@ solveDay14 = (keyString = '', puzzle2 = false) => {
   const grid = [];
   for (let i = 0; i < 128; i += 1) {
     const hash = day10.solvePuzzle2(`${keyString}-${i}`);
-    grid.push(hexToBinary(hash));
+    grid.push(hexToBinary(hash).split(''));
   }
 
   if (!puzzle2) {
-    return grid.reduce((total, current) => total + current.filter(v => v).length, 0);
+    return grid.reduce((total, current) => total + current.filter(v => v === '1').length, 0);
   }
 
   let groups = 0;
   for (let i = 0; i < 128; i += 1) {
     for (let j = 0; j < 128; j += 1) {
-      if (grid[i][j]) {
+      if (grid[i][j] === '1') {
         deleteGroup(grid, i, j);
         groups += 1;
       }
     }
   }
-  const afterGrouping = Date.now();
 
   return groups;
 }
